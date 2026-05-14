@@ -76,14 +76,52 @@ ul, ol { padding: 0; list-style: none; }
 /* ============================================================
    1. IDENTITY HEADER
    ============================================================ */
+.topnav {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topnav__brand {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.topnav__links { display: flex; gap: 8px; }
+.topnav__link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: background .15s, color .15s;
+}
+.topnav__link:hover { color: var(--ink); background: var(--bg-soft); }
+.topnav__link.is-active { color: var(--primary); background: var(--primary-soft); }
+
 .identity {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr auto;
   align-items: end;
-  gap: 24px;
+  gap: 28px;
   padding-bottom: 32px;
   border-bottom: 1px solid var(--line);
   margin-bottom: 8px;
+}
+.identity__portrait {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+  border: 3px solid var(--bg);
+  outline: 1px solid var(--line);
 }
 .identity__name {
   font-size: 48px;
@@ -637,4 +675,184 @@ ul, ol { padding: 0; list-style: none; }
   .pace-badge, .ahead-pill { background: #eee; color: #000; }
   .badge--hit, .badge--partial, .badge--miss { background: #eee; color: #000; }
   .bar__fill { background: #555 !important; }
+}
+
+/* ============================================================
+   LEADERS PAGE
+   ============================================================ */
+.leaders-page { padding-top: 32px; }
+
+.leaders-hero {
+  padding: 8px 0 20px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 8px;
+}
+.leaders-hero__title {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin: 6px 0 14px;
+  max-width: 18ch;
+}
+.leaders-hero__sub {
+  font-size: 17px;
+  color: var(--ink-mid);
+  max-width: 62ch;
+  margin-bottom: 28px;
+}
+.leaders-hero__stats {
+  display: flex;
+  gap: 48px;
+  padding: 20px 0 8px;
+}
+.leaders-hero__stats > div { display: flex; flex-direction: column; gap: 2px; }
+.leaders-hero__num {
+  font-family: var(--mono);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.leaders-hero__lbl {
+  font-size: 12px;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.leader-card {
+  display: block;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.leader-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: #CBD5E1;
+}
+
+.leader-card--featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 28px;
+  padding: 28px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+}
+.leader-card__photo img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+.leader-card__pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: #92400E;
+  margin-bottom: 10px;
+}
+
+.leader-card__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+  background: var(--primary);
+}
+.leader-card__avatar[data-bg="1"] { background: linear-gradient(135deg, #2563EB, #6366F1); }
+.leader-card__avatar[data-bg="2"] { background: linear-gradient(135deg, #10B981, #059669); }
+.leader-card__avatar[data-bg="3"] { background: linear-gradient(135deg, #F59E0B, #D97706); }
+.leader-card__avatar[data-bg="4"] { background: linear-gradient(135deg, #EC4899, #BE185D); }
+.leader-card__avatar[data-bg="5"] { background: linear-gradient(135deg, #0EA5E9, #0369A1); }
+
+.leader-card__name {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
+}
+.leader-card--featured .leader-card__name { font-size: 28px; }
+.leader-card__role {
+  font-size: 13px;
+  color: var(--ink-mid);
+  margin-bottom: 12px;
+}
+.leader-card__quote {
+  font-size: 14.5px;
+  color: var(--ink);
+  line-height: 1.55;
+  margin-bottom: 18px;
+  border-left: 2px solid var(--line);
+  padding-left: 12px;
+}
+.leader-card__stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.leader-card__score {
+  font-family: var(--mono);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-right: 8px;
+}
+.leader-card__delta {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+}
+.leader-card__delta.up { color: var(--success); }
+.leader-card__delta.down { color: var(--danger); }
+.leader-card__level {
+  font-size: 12px;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.leader-card__cta {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+@media (max-width: 720px) {
+  .leaders-grid { grid-template-columns: 1fr; }
+  .leader-card--featured { grid-template-columns: 1fr; }
+  .leaders-hero__stats { gap: 24px; flex-wrap: wrap; }
+  .leaders-hero__title { font-size: 36px; }
+  .identity { grid-template-columns: auto 1fr; }
+  .identity__meta { grid-column: 1 / -1; text-align: left; }
 }
