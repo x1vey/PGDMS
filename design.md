@@ -6,7 +6,7 @@ Design Choices
 DeepThought's current brand uses blues/teals but often lacks visual hierarchy in their application. I've refined it by:
 
 Primary Blue (#2563EB)  confident, professional, used sparingly for key metrics
-Warm Amber (#F59E0B) — adds energy without being aggressive, perfect for achievements
+Warm Amber (#F59E0B) â€” adds energy without being aggressive, perfect for achievements
 Success Green (#10B981)  clear positive signal ("ahead" pace, hits)
 Neutral Slate  replaces pure black/gray, softer on eyes, more modern
 
@@ -28,9 +28,6 @@ The page is story driven, it talks about the highlights, struggles and metirics 
 3. Typography: Inter + JetBrains Mono
 
 Inter: Figma, Notion, Linear all use it. Clean, readable, professional but not corporate-stiff
-JetBrains Mono: for metrics� monospace gives numbers visual weight without making them shouty
+JetBrains Mono: for metrics” monospace gives numbers visual weight without making them shouty
 
-Why not your current font? DeepThought's site likely uses generic web fonts. Inter is an instant upgrade that signals polish.
-
-
-s
+Why not your current font? DeepThought's site likely uses generic web fonts. Inter is an instant upgrade that signals polish.
