@@ -76,14 +76,52 @@ ul, ol { padding: 0; list-style: none; }
 /* ============================================================
    1. IDENTITY HEADER
    ============================================================ */
+.topnav {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topnav__brand {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.topnav__links { display: flex; gap: 8px; }
+.topnav__link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: background .15s, color .15s;
+}
+.topnav__link:hover { color: var(--ink); background: var(--bg-soft); }
+.topnav__link.is-active { color: var(--primary); background: var(--primary-soft); }
+
 .identity {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr auto;
   align-items: end;
-  gap: 24px;
+  gap: 28px;
   padding-bottom: 32px;
   border-bottom: 1px solid var(--line);
   margin-bottom: 8px;
+}
+.identity__portrait {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+  border: 3px solid var(--bg);
+  outline: 1px solid var(--line);
 }
 .identity__name {
   font-size: 48px;

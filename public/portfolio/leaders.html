@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Leaders — PDGMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <nav class="topnav">
+    <a href="./index.html" class="topnav__brand">PDGMS</a>
+    <div class="topnav__links">
+      <a href="./index.html" class="topnav__link">Portfolio</a>
+      <a href="./leaders.html" class="topnav__link is-active">Our Leaders</a>
+    </div>
+  </nav>
+
+  <main class="portfolio leaders-page">
+    <header class="leaders-hero">
+      <p class="section__eyebrow">Our Leaders · March 2026</p>
+      <h1 class="leaders-hero__title">The people building what's next.</h1>
+      <p class="leaders-hero__sub">
+        Six operators on the V2→V3 trajectory. Each portfolio is generated monthly by PDGMS from real
+        delivery, capability and KPI signals — no self-reported fluff.
+      </p>
+      <div class="leaders-hero__stats">
+        <div><span class="leaders-hero__num">6</span><span class="leaders-hero__lbl">candidates tracked</span></div>
+        <div><span class="leaders-hero__num">68</span><span class="leaders-hero__lbl">avg composite score</span></div>
+        <div><span class="leaders-hero__num">4</span><span class="leaders-hero__lbl">ahead of plan</span></div>
+      </div>
+    </header>
+
+    <section class="leaders-grid" aria-label="Leadership candidates">
+      <a class="leader-card leader-card--featured" href="./index.html">
+        <div class="leader-card__photo">
+          <img src="./rajan-iyer.jpg" alt="Rajan Iyer" />
+        </div>
+        <div class="leader-card__body">
+          <span class="leader-card__pill leader-card__pill--featured">Featured this month</span>
+          <h2 class="leader-card__name">Rajan Iyer</h2>
+          <p class="leader-card__role">Production Planning Lead · Sterile Injectables</p>
+          <p class="leader-card__quote">"Broke the regulatory bottleneck — joint reviews replaced 5-week sequential sign-offs."</p>
+          <div class="leader-card__stats">
+            <div><span class="leader-card__score">71</span><span class="leader-card__delta up">▲ +7</span></div>
+            <div class="leader-card__level">V2 → V3 · 3mo ahead</div>
+          </div>
+          <span class="leader-card__cta">View portfolio →</span>
+        </div>
+      </a>
+
+      <article class="leader-card">
+        <div class="leader-card__avatar" data-bg="1">PM</div>
+        <h3 class="leader-card__name">Priya Menon</h3>
+        <p class="leader-card__role">QA Systems Lead · Biologics</p>
+        <p class="leader-card__quote">"Cut deviation closure time by 38% with a triage protocol the site adopted as standard."</p>
+        <div class="leader-card__stats">
+          <div><span class="leader-card__score">74</span><span class="leader-card__delta up">▲ +4</span></div>
+          <div class="leader-card__level">V2 · on plan</div>
+        </div>
+      </article>
+
+      <article class="leader-card">
+        <div class="leader-card__avatar" data-bg="2">DO</div>
+        <h3 class="leader-card__name">Daniel Okafor</h3>
+        <p class="leader-card__role">Engineering Lead · Facility 2</p>
+        <p class="leader-card__quote">"Recovered 14 days of slip on the fill-line qualification by re-sequencing the IQ/OQ tracks."</p>
+        <div class="leader-card__stats">
+          <div><span class="leader-card__score">69</span><span class="leader-card__delta up">▲ +3</span></div>
+          <div class="leader-card__level">V2 → V3 · 1mo ahead</div>
+        </div>
+      </article>
+
+      <article class="leader-card">
+        <div class="leader-card__avatar" data-bg="3">SK</div>
+        <h3 class="leader-card__name">Sara Kowalski</h3>
+        <p class="leader-card__role">Supply Chain Manager</p>
+        <p class="leader-card__quote">"Built a vendor lead-time dashboard the planning team now runs the weekly S&amp;OP off."</p>
+        <div class="leader-card__stats">
+          <div><span class="leader-card__score">66</span><span class="leader-card__delta up">▲ +2</span></div>
+          <div class="leader-card__level">V2 · on plan</div>
+        </div>
+      </article>
+
+      <article class="leader-card">
+        <div class="leader-card__avatar" data-bg="4">AT</div>
+        <h3 class="leader-card__name">Ahmed Tabbara</h3>
+        <p class="leader-card__role">Process Engineer · Lyophilization</p>
+        <p class="leader-card__quote">"Drove the cycle optimization that lifted batch success rate from 88% to 94%."</p>
+        <div class="leader-card__stats">
+          <div><span class="leader-card__score">63</span><span class="leader-card__delta down">▼ -1</span></div>
+          <div class="leader-card__level">V1 → V2 · on plan</div>
+        </div>
+      </article>
+
+      <article class="leader-card">
+        <div class="leader-card__avatar" data-bg="5">LZ</div>
+        <h3 class="leader-card__name">Lin Zhao</h3>
+        <p class="leader-card__role">Validation Specialist</p>
+        <p class="leader-card__quote">"Authored 11 protocols this quarter — first-pass approval rate of 91%."</p>
+        <div class="leader-card__stats">
+          <div><span class="leader-card__score">61</span><span class="leader-card__delta up">▲ +5</span></div>
+          <div class="leader-card__level">V1 → V2 · 2mo ahead</div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="foot">
+      <p>PDGMS · Performance Delivery &amp; Growth Management System</p>
+      <p>Cohort snapshot · 31 March 2026</p>
+    </footer>
+  </main>
+</body>
+</html>
